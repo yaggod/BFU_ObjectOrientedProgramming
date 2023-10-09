@@ -28,6 +28,6 @@
         }
 
 
-        public abstract double CalculateIngegral(double lowerBound, double upperBound);
+        public abstract double CalculateIntegral(double lowerBound, double upperBound);
     }
 }

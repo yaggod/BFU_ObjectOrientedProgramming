@@ -7,7 +7,7 @@
             : base(stepsCount, functionToIntegrate) { }
 
 
-        public override sealed double CalculateIngegral(double lowerBound, double upperBound)
+        public override sealed double CalculateIntegral(double lowerBound, double upperBound)
         {
             double boundsDelta = upperBound - lowerBound;
             double step = boundsDelta / StepsCount;
