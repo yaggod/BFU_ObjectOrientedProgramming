@@ -1,10 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Array3D
 {
@@ -48,8 +42,8 @@ namespace Array3D
         }
 
 
-        public Array3D(int firstDimension, int secondDimension, int thirdDimension, T valuesToFillWith = default) 
-            : this(firstDimension, secondDimension, thirdDimension, (i,j,k) => valuesToFillWith)
+        public Array3D(int firstDimension, int secondDimension, int thirdDimension, T valuesToFillWith = default)
+            : this(firstDimension, secondDimension, thirdDimension, (i, j, k) => valuesToFillWith)
         {
         }
 
@@ -62,8 +56,8 @@ namespace Array3D
             array = new T[firstDimension * secondDimension * thirdDimension];
 
             for (int i = 0; i < FirstDimension; i++)
-                for(int j = 0; j < SecondDimension; j++)
-                    for(int k = 0; k < ThirdDimension; k++)
+                for (int j = 0; j < SecondDimension; j++)
+                    for (int k = 0; k < ThirdDimension; k++)
                         this[i, j, k] = indexesToValue(i, j, k);
         }
 
@@ -72,9 +66,16 @@ namespace Array3D
             T[,] result = new T[SecondDimension, ThirdDimension];
             for (int j = 0; j < SecondDimension; j++)
                 for (int k = 0; k < ThirdDimension; k++)
-                    result[j,k] = this[i, j, k];
+                    result[j, k] = this[i, j, k];
 
             return result;
+        }
+
+        public void SetValues0(int i, T[,] values)
+        {
+            for (int j = 0; j < SecondDimension; j++)
+                for (int k = 0; k < ThirdDimension; k++)
+                    this[i, j, k] = values[j, k];
         }
 
         public T[,] GetValues1(int j)
@@ -87,6 +88,13 @@ namespace Array3D
             return result;
         }
 
+        public void SetValues1(int j, T[,] values)
+        {
+            for (int i = 0; i < FirstDimension; i++)
+                for (int k = 0; k < ThirdDimension; k++)
+                    this[i, j, k] = values[i, k];
+        }
+
         public T[,] GetValues2(int k)
         {
             T[,] result = new T[FirstDimension, SecondDimension];
@@ -95,6 +103,13 @@ namespace Array3D
                     result[j, k] = this[i, j, k];
 
             return result;
+        }
+
+        public void SetValues2(int k, T[,] values)
+        {
+            for (int i = 0; i < FirstDimension; i++)
+                for (int j = 0; j < SecondDimension; j++)
+                    this[i, j, k] = values[i, j];
         }
 
         public T[] GetValues01(int i, int j)
@@ -107,6 +122,12 @@ namespace Array3D
             return result;
         }
 
+        public void SetValues01(int i, int j, T[] values)
+        {
+            for (int k = 0; k < ThirdDimension; k++)
+                this[i, j, k] = values[k];
+        }
+
         public T[] GetValues02(int i, int k)
         {
             T[] result = new T[SecondDimension];
@@ -115,6 +136,12 @@ namespace Array3D
                 result[j] = this[i, j, k];
 
             return result;
+        }
+
+        public void SetValues02(int i, int k, T[] values)
+        {
+            for (int j = 0; j < SecondDimension; j++)
+                this[i, j, k] = values[j];
         }
 
         public T[] GetValues12(int j, int k)
@@ -127,7 +154,11 @@ namespace Array3D
             return result;
         }
 
-
+        public void SetValues12(int j, int k, T[] values)
+        {
+            for (int i = 0; i < FirstDimension; i++)
+                this[i, j, k] = values[i];
+        }
 
         private int GetOneDimensionalIndexFromThreeDimensionalIndex(int i, int j, int k)
         {
@@ -151,14 +182,14 @@ namespace Array3D
         {
             StringBuilder stringBuilder = new();
             stringBuilder.Append('[');
-            for(int i = 0; i < FirstDimension;i++)
+            for (int i = 0; i < FirstDimension; i++)
             {
                 stringBuilder.Append('[');
                 for (int j = 0; j < SecondDimension; j++)
                 {
                     stringBuilder.Append('{');
 
-                    var thirdDimensionValues = Enumerable.Range(0, ThirdDimension).Select(k => this[i,j, k]);
+                    var thirdDimensionValues = Enumerable.Range(0, ThirdDimension).Select(k => this[i, j, k]);
                     stringBuilder.AppendJoin(',', thirdDimensionValues);
 
                     stringBuilder.Append('}');

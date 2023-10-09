@@ -12,7 +12,7 @@ namespace Array3D
                 100 * i + 10 * j + k;
 
             Array3D<int> fakeArray = new Array3D<int>(6, 4, 3, lambda);
-            fakeArray[4, 1, 1] = 2345789;
+            fakeArray[5, 3, 2] = 2345789;
             Console.WriteLine(fakeArray);
 
             int[,] twoDimensionalValues = fakeArray.GetValues0(3);
@@ -27,6 +27,13 @@ namespace Array3D
 
             for (int i = 0; i < oneDimensinalValues.Length; i++)
                 Console.WriteLine($"{i}: {oneDimensinalValues[i]}");
+
+            fakeArray.SetValues0(1, twoDimensionalValues);
+
+            Console.WriteLine('\n');
+
+            Console.WriteLine(fakeArray);
+
         }
     }
 }
