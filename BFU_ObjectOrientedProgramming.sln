@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegralSolverApp", "IntegralSolverApp\IntegralSolverApp.csproj", "{56151358-0D84-4256-9BC9-5016441FA741}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array3D", "Array3D\Array3D.csproj", "{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array3D", "Array3D\Array3D.csproj", "{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedConsole", "ExtendedConsole\ExtendedConsole.csproj", "{2B7CB876-F35B-4572-879B-E091843AAA89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7CB876-F35B-4572-879B-E091843AAA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7CB876-F35B-4572-879B-E091843AAA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7CB876-F35B-4572-879B-E091843AAA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7CB876-F35B-4572-879B-E091843AAA89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
