@@ -99,8 +99,6 @@ namespace ExtendedConsole
             {
                 int firstIndex = i / fontSize;
                 int secondIndex = i % fontSize;
-                if (secondIndex >= fontSize)
-                    continue;
 
                 char currentChar = (char)source[i];
                 currentChar = currentChar == ' ' ? emptyChar : currentChar;
