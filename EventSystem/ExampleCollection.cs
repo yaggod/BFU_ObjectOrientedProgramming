@@ -65,14 +65,5 @@ namespace EventSystem
             return Callback.Remove(action);
         }
 
-        void INotifyElementChange<T, CollectionChangedEventArgs<T>>.AddHandler(Action<object, CollectionChangedEventArgs<T>> action)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool INotifyElementChange<T, CollectionChangedEventArgs<T>>.RemoveHandler(Action<object, CollectionChangedEventArgs<T>> action)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
