@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegralSolverApp", "Integr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array3D", "Array3D\Array3D.csproj", "{99B97A1F-7CEF-48AB-B51D-A747A7FB1BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendedConsole", "ExtendedConsole\ExtendedConsole.csproj", "{2B7CB876-F35B-4572-879B-E091843AAA89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtendedConsole", "ExtendedConsole\ExtendedConsole.csproj", "{2B7CB876-F35B-4572-879B-E091843AAA89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSystem", "EventSystem\EventSystem.csproj", "{0F516D56-A5BA-4B74-AC71-1401D5811D9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2B7CB876-F35B-4572-879B-E091843AAA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7CB876-F35B-4572-879B-E091843AAA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7CB876-F35B-4572-879B-E091843AAA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F516D56-A5BA-4B74-AC71-1401D5811D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F516D56-A5BA-4B74-AC71-1401D5811D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F516D56-A5BA-4B74-AC71-1401D5811D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F516D56-A5BA-4B74-AC71-1401D5811D9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
